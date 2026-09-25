@@ -1,10 +1,9 @@
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useEffect } from 'react';
 import { 
-  Sparkles, Award, ShieldCheck, TrendingUp, BookOpen, Briefcase, 
-  Users, Building, ChevronRight, CheckCircle2, AlertCircle, 
-  MessageSquare, Send, Globe, Sun, Moon, Zap, WifiOff, Filter, 
-  Search, ArrowUpRight, Check, RefreshCw, BarChart3, Layers, 
-  GraduationCap, Target, Flame, Compass, ExternalLink, UserCheck
+  Sparkles, Award, ShieldCheck, TrendingUp, Briefcase, Users,
+  ChevronRight, CheckCircle2, AlertCircle, MessageSquare, Send,
+  Sun, Moon, Zap, WifiOff, Filter, ArrowUpRight, Check, BarChart3,
+  Target, Flame
 } from 'lucide-react';
 
 const INITIAL_STUDENT_DATA = {
@@ -127,7 +126,6 @@ export default function SkillSetuApp() {
   // Assessment Quiz State
   const [quizActive, setQuizActive] = useState(false);
   const [quizStep, setQuizStep] = useState(0);
-  const [quizScore, setQuizScore] = useState(0);
 
   // Sync role switch with appropriate initial screen
   useEffect(() => {
@@ -196,7 +194,6 @@ export default function SkillSetuApp() {
 
   const handleAnswerQuiz = (index) => {
     if (index === quizQuestions[quizStep].correct) {
-      setQuizScore(prev => prev + 1);
     }
 
     if (quizStep + 1 < quizQuestions.length) {
