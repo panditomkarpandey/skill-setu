@@ -221,7 +221,7 @@ export default function SkillSetuApp() {
   return (
     <div className={`min-h-screen font-sans transition-colors duration-300 ${darkMode ? 'bg-[#0E1A29] text-slate-100' : 'bg-slate-50 text-slate-900'}`}>
       {}
-      header className={`sticky top-0 z-40 border-b backdrop-blur-md transition-colors ${darkMode ? 'bg-[#1B3A5C]/90 border-slate-700' : 'bg-[#1B3A5C] text-white border-[#17756F]/30'}`}>
+      <header className={`sticky top-0 z-40 border-b backdrop-blur-md transition-colors ${darkMode ? 'bg-[#1B3A5C]/90 border-slate-700' : 'bg-[#1B3A5C] text-white border-[#17756F]/30'}`}>
        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
           
           {/* Logo & Theme Bridge Concept */}
